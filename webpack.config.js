@@ -24,6 +24,13 @@ module.exports = {
                 }
             },
             {
+                test: /\.js?$/,
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/env']
+                }
+            },
+            {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract({
                   loader: 'css-loader',
